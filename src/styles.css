@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/* https://bootstrapmade.com/demo/NiceAdmin/ */
+@import "./app/shared/styles/NiceAdmin.css";
+/* ng add @ng-bootstrap/ng-bootstrap */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+/* npm i bootstrap-icons --save */
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
