@@ -6,14 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './dropdown-nav-item-icon.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class DropdownNavItemIconComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class DropdownNavItemIconComponent {
+  constructor() {}
 }
