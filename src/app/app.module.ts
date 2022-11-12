@@ -5,10 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, NavbarComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    NavbarComponent,
+    SidebarComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

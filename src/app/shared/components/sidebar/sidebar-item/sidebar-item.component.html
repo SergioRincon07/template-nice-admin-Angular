@@ -1,1 +1,13 @@
-<p>sidebar-item works!</p>
+<li class="nav-item">
+  <button
+    class="nav-link collapsed btn-Transparent-Icon"
+    data-bs-target="#components-nav"
+    data-bs-toggle="collapse"
+    href="#">
+    <i [class]="SideBarManu.icon"></i>
+    <span>{{ SideBarManu.title }}</span>
+    <i class="bi bi-chevron-down ms-auto"></i>
+  </button>
+  <app-dropdown-sidebar-item [SideBarManuItem]="SideBarManu.items">
+  </app-dropdown-sidebar-item>
+</li>
