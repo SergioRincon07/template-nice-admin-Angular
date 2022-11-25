@@ -1,13 +1,17 @@
-<li class="nav-item">
+<li class="nav-item" appClickOutside (clickOutside)="clickedOutside()">
   <button
     class="nav-link collapsed btn-Transparent-Icon"
+    [ngClass]="{ collapsed: !showDropdwon }"
     data-bs-target="#components-nav"
     data-bs-toggle="collapse"
-    href="#">
+    href="#"
+    (click)="clickButton()">
     <i [class]="SideBarManu.icon"></i>
     <span>{{ SideBarManu.title }}</span>
     <i class="bi bi-chevron-down ms-auto"></i>
   </button>
-  <app-dropdown-sidebar-item [SideBarManuItem]="SideBarManu.items">
-  </app-dropdown-sidebar-item>
+  <app-dropdown-sidebar
+    *ngIf="showDropdwon"
+    [SideBarManuItem]="SideBarManu.items">
+  </app-dropdown-sidebar>
 </li>
