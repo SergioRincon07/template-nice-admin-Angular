@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarItemComponent } from './sidebar-item/sidebar-item.component';
 import { SidebarItemAloneComponent } from './sidebar-item-alone/sidebar-item-alone.component';
-import { SideBarManu } from './sidebar-models';
+import { SideBarManu } from '../../models/sidebar-models';
 
 @Component({
   selector: 'app-sidebar',
