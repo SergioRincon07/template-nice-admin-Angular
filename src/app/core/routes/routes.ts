@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { PublicRoutes, PrivateRoutes } from './public-private-routes';
+
 export const routes: Routes = [
   {
     path: '',
@@ -6,16 +8,16 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'home',
+    path: PublicRoutes.HOME,
     loadComponent: () => import('../../pages/home/home.component'),
   },
   {
-    path: 'crearusuario',
+    path: PrivateRoutes.CREAR_USUARIO,
     loadComponent: () =>
       import('../../pages/crear-usuario/crear-usuario.component'),
   },
   {
-    path: 'administrarusuario',
+    path: PrivateRoutes.ADMINISTRAR_USUARIO,
     loadComponent: () =>
       import('../../pages/administrar-usuario/administrar-usuario.component'),
   },

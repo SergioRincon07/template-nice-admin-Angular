@@ -3,22 +3,41 @@ import { CommonModule } from '@angular/common';
 import { SidebarItemComponent } from './sidebar-item/sidebar-item.component';
 import { SidebarItemAloneComponent } from './sidebar-item-alone/sidebar-item-alone.component';
 import { SideBarManu } from '../../models/sidebar-models';
+import {
+  PrivateRoutes,
+  PublicRoutes,
+} from '../../../core/routes/public-private-routes';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [CommonModule, SidebarItemComponent, SidebarItemAloneComponent],
+  imports: [
+    CommonModule,
+    SidebarItemComponent,
+    SidebarItemAloneComponent,
+    RouterModule,
+  ],
   templateUrl: './sidebar.component.html',
   styleUrls: [],
 })
 export class SidebarComponent {
   constructor() {}
+  readonly HOME = PublicRoutes.HOME;
   SideBarMenuProveedor: SideBarManu = {
-    title: 'Proveedor',
+    title: 'Usuario',
     icon: 'bi bi-journal-text',
     items: [
-      { title: 'Crear Proveedor', icon: 'bi bi-person-plus-fill' },
-      { title: 'Eliminar Proveedor', icon: 'bi bi-person-x-fill' },
+      {
+        title: 'Crear Usuario',
+        icon: 'bi bi-person-plus-fill',
+        link: PrivateRoutes.CREAR_USUARIO,
+      },
+      {
+        title: 'Administrar Usuario',
+        icon: 'bi bi-person-x-fill',
+        link: PrivateRoutes.ADMINISTRAR_USUARIO,
+      },
     ],
   };
 
@@ -26,8 +45,8 @@ export class SidebarComponent {
     title: 'Evaluacion',
     icon: 'bi bi-clipboard2-check',
     items: [
-      { title: 'Calificar', icon: 'bi bi-card-checklist' },
-      { title: 'Valorazion', icon: 'bi bi-clipboard-data' },
+      { title: 'Calificar', icon: 'bi bi-card-checklist', link: '#1' },
+      { title: 'Valorazion', icon: 'bi bi-clipboard-data', link: '#2' },
     ],
   };
 
@@ -35,15 +54,19 @@ export class SidebarComponent {
     title: 'Reportes',
     icon: 'bi bi-file-earmark-text',
     items: [
-      { title: 'Basico', icon: 'bi bi-file-earmark-bar-graph' },
-      { title: 'General', icon: 'bi bi-file-earmark-bar-graph' },
-      { title: 'Estadisticas', icon: 'bi bi-file-earmark-bar-graph' },
+      { title: 'Basico', icon: 'bi bi-file-earmark-bar-graph', link: '#1' },
+      { title: 'General', icon: 'bi bi-file-earmark-bar-graph', link: '#2' },
+      {
+        title: 'Estadisticas',
+        icon: 'bi bi-file-earmark-bar-graph',
+        link: '#3',
+      },
     ],
   };
 
   SideBarMenuAdministracion: SideBarManu = {
     title: 'Administracion',
     icon: 'bi bi-file-earmark-text',
-    items: [{ title: 'Usuarios', icon: 'bi bi-person-video2' }],
+    items: [{ title: 'Usuarios', icon: 'bi bi-person-video2', link: '#1' }],
   };
 }

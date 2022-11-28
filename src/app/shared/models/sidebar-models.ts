@@ -7,4 +7,5 @@ export interface SideBarManu {
 export interface SideBarManuItem {
   title: string;
   icon: string;
+  link: string;
 }

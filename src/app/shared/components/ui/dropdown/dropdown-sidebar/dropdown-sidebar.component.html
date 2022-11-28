@@ -3,7 +3,9 @@
   class="nav-content collapse show"
   data-bs-parent="#sidebar-nav">
   <ng-template ngFor let-item [ngForOf]="SideBarManuItem">
-    <app-dropdown-sidebar-item [SidebarTitle]="item.title">
+    <app-dropdown-sidebar-item
+      [SidebarTitle]="item.title"
+      [SidebarLink]="item.link">
     </app-dropdown-sidebar-item>
   </ng-template>
 </ul>
