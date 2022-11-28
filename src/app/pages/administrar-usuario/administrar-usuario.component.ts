@@ -6,9 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './administrar-usuario.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class AdministrarUsuarioComponent {
-
-}
+export default class AdministrarUsuarioComponent {}

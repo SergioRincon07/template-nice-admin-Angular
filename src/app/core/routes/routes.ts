@@ -7,21 +7,16 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () =>
-      import('../../pages/home/home.component').then(c => c.HomeComponent),
+    loadComponent: () => import('../../pages/home/home.component'),
   },
   {
     path: 'crearusuario',
     loadComponent: () =>
-      import('../../pages/crear-usuario/crear-usuario.component').then(
-        c => c.CrearUsuarioComponent
-      ),
+      import('../../pages/crear-usuario/crear-usuario.component'),
   },
   {
     path: 'administrarusuario',
     loadComponent: () =>
-      import(
-        '../../pages/administrar-usuario/administrar-usuario.component'
-      ).then(c => c.AdministrarUsuarioComponent),
+      import('../../pages/administrar-usuario/administrar-usuario.component'),
   },
 ];

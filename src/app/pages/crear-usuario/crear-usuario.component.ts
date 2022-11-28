@@ -8,4 +8,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './crear-usuario.component.html',
   styles: [],
 })
-export class CrearUsuarioComponent {}
+export default class CrearUsuarioComponent {}

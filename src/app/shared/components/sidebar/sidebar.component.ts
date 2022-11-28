@@ -9,7 +9,7 @@ import { SideBarManu } from '../../models/sidebar-models';
   standalone: true,
   imports: [CommonModule, SidebarItemComponent, SidebarItemAloneComponent],
   templateUrl: './sidebar.component.html',
-  styles: [],
+  styleUrls: [],
 })
 export class SidebarComponent {
   constructor() {}

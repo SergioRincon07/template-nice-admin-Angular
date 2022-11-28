@@ -14,7 +14,7 @@ import { NavbarItemProfileComponent } from './navbar-item-profile/navbar-item-pr
     NavbarItemProfileComponent,
   ],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+  styleUrls: [],
 })
 export class NavbarComponent {
   constructor() {}
