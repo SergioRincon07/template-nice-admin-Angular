@@ -4,7 +4,7 @@ import { PublicRoutes, PrivateRoutes } from './public-private-routes';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: `/${PublicRoutes.HOME}`,
     pathMatch: 'full',
   },
   {
@@ -20,5 +20,10 @@ export const routes: Routes = [
     path: PrivateRoutes.ADMINISTRAR_USUARIO,
     loadComponent: () =>
       import('../../pages/administrar-usuario/administrar-usuario.component'),
+  },
+  { path: '**', redirectTo: '/404', pathMatch: 'full' },
+  {
+    path: '404',
+    loadComponent: () => import('../../pages/not-found/not-found.component'),
   },
 ];

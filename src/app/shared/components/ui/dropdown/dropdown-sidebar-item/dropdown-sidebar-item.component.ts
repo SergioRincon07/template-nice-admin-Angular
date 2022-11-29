@@ -18,7 +18,6 @@ export class DropdownSidebarItemComponent {
   selected = false;
   clickButton() {
     this.selected = !this.selected;
-    console.log(this.selected);
   }
   clickedOutside(): void {
     this.selected = false;
