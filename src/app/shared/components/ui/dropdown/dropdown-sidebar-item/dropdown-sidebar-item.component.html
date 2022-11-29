@@ -1,6 +1,6 @@
 <li appClickOutside (clickOutside)="clickedOutside()">
   <a
-    [routerLink]="SidebarLink"
+    [routerLink]="['/', SidebarLink]"
     [ngClass]="{ active: selected }"
     (click)="clickButton()">
     <i class="bi bi-circle"></i><span>{{ SidebarTitle }}</span>
