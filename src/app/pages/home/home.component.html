@@ -14,6 +14,17 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Home <span>/Home</span></h5>
+              <div class="products-grid">
+                <div *ngFor="let product of products">
+                  <img [src]="product.images[0]" />
+                  <p>{{ product.title }}</p>
+                </div>
+                <!-- <img
+                  ngSrc="../../../assets/images/not-found.svg"
+                  width="400"
+                  height="200"
+                  priority /> -->
+              </div>
             </div>
           </div>
         </div>
