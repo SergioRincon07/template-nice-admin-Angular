@@ -3,21 +3,13 @@ import { CommonModule } from '@angular/common';
 import { SidebarItemComponent } from './sidebar-item/sidebar-item.component';
 import { SidebarItemAloneComponent } from './sidebar-item-alone/sidebar-item-alone.component';
 import { SideBarManu } from '../../models/sidebar';
-import {
-  PrivateRoutes,
-  PublicRoutes,
-} from '../../../core/routes/public-private-routes';
+import { PrivateRoutes, PublicRoutes } from '../../../core/routes/public-private-routes';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [
-    CommonModule,
-    SidebarItemComponent,
-    SidebarItemAloneComponent,
-    RouterModule,
-  ],
+  imports: [CommonModule, SidebarItemComponent, SidebarItemAloneComponent, RouterModule],
   templateUrl: './sidebar.component.html',
   styleUrls: [],
 })

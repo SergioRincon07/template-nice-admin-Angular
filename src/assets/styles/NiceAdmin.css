@@ -343,7 +343,7 @@
   
   .breadcrumb .active {
     color: #51678f;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   /* Bordered Tabs */
@@ -500,12 +500,12 @@
   
   .header-nav .nav-profile span {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   .header-nav .badge-number {
     position: absolute;
-    inset: -2px -5px auto auto;
+    inset: -7px -7px auto auto;
     font-weight: normal;
     font-size: 12px;
     padding: 3px 6px;
@@ -529,7 +529,7 @@
   
   .header-nav .notifications .notification-item h4 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 5px;
   }
   
@@ -563,7 +563,7 @@
   
   .header-nav .messages .message-item h4 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 5px;
     color: #444444;
   }
@@ -587,7 +587,7 @@
   .header-nav .profile .dropdown-header h6 {
     font-size: 18px;
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 500;
     color: #444444;
   }
   
@@ -692,7 +692,7 @@
     font-size: 11px;
     text-transform: uppercase;
     color: #899bbd;
-    font-weight: 600;
+    font-weight: 500;
     margin: 10px 0 5px 15px;
   }
   
@@ -700,7 +700,7 @@
     display: flex;
     align-items: center;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color: #4154f1;
     transition: 0.3;
     background: #f6f9ff;
@@ -751,7 +751,7 @@
     display: flex;
     align-items: center;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: #012970;
     transition: 0.3;
     padding: 10px 0 10px 40px;
@@ -812,7 +812,7 @@
   .dashboard .filter .dropdown-header h6 {
     text-transform: uppercase;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
     color: #aab7cf;
     margin-bottom: 0;
@@ -1060,12 +1060,12 @@
   }
   
   .profile .profile-overview .label {
-    font-weight: 600;
+    font-weight: 500;
     color: rgba(1, 41, 112, 0.6);
   }
   
   .profile .profile-edit label {
-    font-weight: 600;
+    font-weight: 500;
     color: rgba(1, 41, 112, 0.6);
   }
   
@@ -1078,7 +1078,7 @@
   --------------------------------------------------------------*/
   .faq .basic h6 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #4154f1;
   }
   
@@ -1120,7 +1120,7 @@
     text-align: left;
     padding: 15px;
     margin-bottom: 24px;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   .contact .php-email-form .sent-message {
@@ -1130,7 +1130,7 @@
     text-align: center;
     padding: 15px;
     margin-bottom: 24px;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   .contact .php-email-form .loading {

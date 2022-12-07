@@ -6,11 +6,7 @@ import { ClickOutsideDirective } from 'src/app/shared/directives/click-outside.d
 @Component({
   selector: 'app-navbar-item-profile',
   standalone: true,
-  imports: [
-    CommonModule,
-    DropdownNavItemProfileComponent,
-    ClickOutsideDirective,
-  ],
+  imports: [CommonModule, DropdownNavItemProfileComponent, ClickOutsideDirective],
   templateUrl: './navbar-item-profile.component.html',
   styles: [],
 })
