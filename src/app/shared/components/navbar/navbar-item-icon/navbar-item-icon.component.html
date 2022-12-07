@@ -1,10 +1,7 @@
 <li class="nav-item dropdown" appClickOutside (clickOutside)="clickedOutside()">
-  <button
-    class="nav-link nav-icon show btn-Transparent-Icon"
-    (click)="clickButton()">
+  <button class="nav-link nav-icon show btn-Transparent-Icon" (click)="clickButton()">
     <i class="{{ BoostrapIcon }}"></i>
     <span class="badge bg-primary badge-number">4</span>
   </button>
-  <app-dropdown-nav-item-icon *ngIf="showDropdwon">
-  </app-dropdown-nav-item-icon>
+  <app-dropdown-nav-item-icon *ngIf="showDropdwon"> </app-dropdown-nav-item-icon>
 </li>

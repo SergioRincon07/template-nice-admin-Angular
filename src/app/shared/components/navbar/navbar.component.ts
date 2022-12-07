@@ -7,12 +7,7 @@ import { NavbarItemProfileComponent } from './navbar-item-profile/navbar-item-pr
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    CommonModule,
-    LogoComponent,
-    NavbarItemIconComponent,
-    NavbarItemProfileComponent,
-  ],
+  imports: [CommonModule, LogoComponent, NavbarItemIconComponent, NavbarItemProfileComponent],
   templateUrl: './navbar.component.html',
   styleUrls: [],
 })
