@@ -18,6 +18,7 @@
                 <div *ngFor="let product of products">
                   <img [src]="product.images[0]" />
                   <p>{{ product.title }}</p>
+                  <button (click)="openDialog('0ms', '0ms')">Add Product</button>
                 </div>
                 <!-- <img
                   ngSrc="../../../assets/images/not-found.svg"
