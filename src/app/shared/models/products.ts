@@ -12,3 +12,7 @@ interface Category {
   name: string;
   typeImg: string;
 }
+
+export interface CreateProduct extends Omit<Product, 'id' | 'category'> {
+  categoryId: number;
+}

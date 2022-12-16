@@ -14,11 +14,21 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Home <span>/Home</span></h5>
+              <button type="button" (click)="creteNewProduct()" class="btn btn-success btn-sm">
+                create product
+              </button>
               <div class="products-grid">
                 <div *ngFor="let product of products">
                   <img [src]="product.images[0]" />
                   <p>{{ product.title }}</p>
-                  <button (click)="openDialog('0ms', '0ms')">Add Product</button>
+                  <button type="button" class="btn btn-light btn-sm">Add Product</button>
+                  &nbsp;
+                  <button
+                    type="button"
+                    class="btn btn-info btn-sm"
+                    (click)="openDialog('0ms', '0ms', product.id)">
+                    View
+                  </button>
                 </div>
                 <!-- <img
                   ngSrc="../../../assets/images/not-found.svg"
