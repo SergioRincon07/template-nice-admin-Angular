@@ -38,13 +38,13 @@
     "@angular/cli": "~15.0.1",
     "@angular/compiler-cli": "^15.0.1",
     "@angular/localize": "^15.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "@typescript-eslint/eslint-plugin": "5.46.1",
+    "@typescript-eslint/parser": "5.46.1",
+    "eslint": "8.30.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
     "prettier": "2.8.0",
-    "prettier-eslint": "^15.0.1",
+    "prettier-eslint": "15.0.1",
     "typescript": "4.8.4"
   }
 }
