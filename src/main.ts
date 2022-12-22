@@ -4,6 +4,7 @@ import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { routes } from './app/core/routes/routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -16,5 +17,6 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     provideHttpClient(),
     importProvidersFrom(BrowserAnimationsModule, BrowserAnimationsModule),
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
 }).catch(err => console.error(err));
