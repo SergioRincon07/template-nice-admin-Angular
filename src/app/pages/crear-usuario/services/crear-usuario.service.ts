@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -7,29 +7,56 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CrearUsuarioService {
   constructor(private http: HttpClient) {}
 
-  getReportExample(parameters: any[], reportName: string, format: string, fileName: string) {
+  private urlReportes = 'http://asus_tuf_b550/Reports';
+
+  getReportExample() {
     {
-      const irsc = {
-        username: 'sergi',
-        password: '',
-        domain: '',
-      };
-      const reportServerUrl = 'http://asus_tuf_b550/ReportServer';
-      const reportPath = '/ReportsExamples';
+      const headers = new HttpHeaders()
+        .set('NombreReporte', 'ReportsExamples/RptProjectExample')
+        .set('NombreArchivo', 'Reporte')
+        .set('Formato', 'PDF');
 
-      const options = {
-        params: {
-          ...parameters,
-          reportName,
-          format,
-          fileName,
-        },
-        responseType: 'blob' as 'json',
-      };
-
-      return this.http.get(
-        'http://asus_tuf_b550/ReportServer/Pages/ReportViewer.aspx?%2FReportsExamples%2FRptProjectExample&rc:showbackbutton=true'
-      );
+      return this.http.get(this.urlReportes, {
+        headers,
+        responseType: 'blob',
+        withCredentials: true,
+      });
     }
+  }
+
+  getPdfReport() {
+    let urlReport = 'http://asus_tuf_b550/ReportServer/Reserved.ReportViewerWebControl.axd';
+    const params = new HttpParams()
+      .set('ExecutionID', 'yrld1a55upejdsqrktwlv5vv')
+      .set('Culture', '3082')
+      .set('CultureOverrides', 'False')
+      .set('UICulture', '10')
+      .set('UICultureOverrides', 'False')
+      .set('ReportStack', '1')
+      .set('ControlID', 'cfd0861a81a14587b2e18a8cc5435b21')
+      .set('OpType', 'Export')
+      .set('FileName', 'RptProjectExample')
+      .set('ContentDisposition', 'OnlyHtmlInline')
+      .set('Format', 'PDF');
+
+    return this.http.get(urlReport, { params, withCredentials: true });
+  }
+
+  getHTMLReport() {
+    let urlReport = 'http://asus_tuf_b550/ReportServer/Reserved.ReportViewerWebControl.axd';
+    const params = new HttpParams()
+      .set('ExecutionID', 'yrld1a55upejdsqrktwlv5vv')
+      .set('Culture', '3082')
+      .set('CultureOverrides', 'False')
+      .set('UICulture', '10')
+      .set('UICultureOverrides', 'False')
+      .set('ReportStack', '1')
+      .set('ControlID', 'cfd0861a81a14587b2e18a8cc5435b21')
+      .set('OpType', 'Export')
+      .set('FileName', 'RptProjectExample')
+      .set('ContentDisposition', 'OnlyHtmlInline')
+      .set('Format', 'PDF');
+
+    return this.http.get(urlReport, { params, withCredentials: true });
   }
 }

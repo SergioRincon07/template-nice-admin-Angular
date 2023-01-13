@@ -20,6 +20,7 @@ export default class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.homeService.getAllProducts().subscribe(data => {
       this.products = data;
+      console.log('sub Products');
     });
   }
 
