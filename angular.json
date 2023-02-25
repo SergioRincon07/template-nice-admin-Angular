@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "template-nice-admin": {
+    "administracion-proveedores-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/template-nice-admin",
+            "outputPath": "dist/administracion-proveedores-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -93,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "template-nice-admin:build:production"
+              "browserTarget": "administracion-proveedores-angular:build:production"
             },
             "development": {
-              "browserTarget": "template-nice-admin:build:development"
+              "browserTarget": "administracion-proveedores-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "template-nice-admin:build"
+            "browserTarget": "administracion-proveedores-angular:build"
           }
         },
         "lint": {
