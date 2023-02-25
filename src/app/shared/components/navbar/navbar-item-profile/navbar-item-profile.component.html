@@ -1,4 +1,4 @@
-<li class="nav-item dropdown pe-4" appClickOutside (clickOutside)="clickedOutside()">
+<li class="nav-item dropdown pe-3" appClickOutside (clickOutside)="clickedOutside()">
   <button
     class="nav-link nav-profile show d-flex align-items-center pe-0 btn-Transparent-Icon"
     (click)="clickButton()">
@@ -6,9 +6,8 @@
       src="assets/img/profile-img.jpg"
       alt="Profile"
       class="rounded-circle" /> -->
-    <span class="d-none d-md-block dropdown-toggle ps-2">{{ userProfile?.NTuser }}</span>
+    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
   </button>
   <!-- End Profile Dropdown Items -->
-  <app-dropdown-nav-item-profile *ngIf="showDropdwon" [userProfile]="userProfile">
-  </app-dropdown-nav-item-profile>
+  <app-dropdown-nav-item-profile *ngIf="showDropdwon"> </app-dropdown-nav-item-profile>
 </li>

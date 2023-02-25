@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  urlWebApiProveedores: 'http://localhost:57794',
 };
 
 /*

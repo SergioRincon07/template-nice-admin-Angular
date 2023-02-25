@@ -2,35 +2,26 @@
 <aside id="sidebar" class="sidebar">
   <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/' + HOME]">
+      <a class="nav-link" [routerLink]="HOME">
         <i class="bi bi-grid"></i>
         <span>Home</span>
       </a>
     </li>
     <!-- End Dashboard Nav -->
-    <ng-container *ngIf="logeado">
-      <app-sidebar-item [SideBarManu]="SideBarMenuProveedor" *ngIf="SideBarMenuProveedor.permiso">
-      </app-sidebar-item>
-      <app-sidebar-item [SideBarManu]="SideBarMenuEvaluacion" *ngIf="SideBarMenuEvaluacion.permiso">
-      </app-sidebar-item>
-      <app-sidebar-item [SideBarManu]="SideBarMenuReportes" *ngIf="SideBarMenuReportes.permiso">
-      </app-sidebar-item>
-      <app-sidebar-item [SideBarManu]="SideBarMenuUsuarios" *ngIf="SideBarMenuUsuarios.permiso">
-      </app-sidebar-item>
 
-      <!-- <li class="nav-heading">Pages</li>
+    <app-sidebar-item [SideBarManu]="SideBarMenuProveedor"> </app-sidebar-item>
+    <app-sidebar-item [SideBarManu]="SideBarMenuEvaluacion"> </app-sidebar-item>
+    <app-sidebar-item [SideBarManu]="SideBarMenuReportes"> </app-sidebar-item>
+    <app-sidebar-item [SideBarManu]="SideBarMenuAdministracion"> </app-sidebar-item>
 
-      <app-sidebar-item-alone
-        TitelItemAlone="Login"
-        IconItemAlone="bi bi-box-arrow-in-right"
-        [SidebarLinkAlone]="LOGIN">
-      </app-sidebar-item-alone>
-      <app-sidebar-item-alone
-        TitelItemAlone="Error 404"
-        IconItemAlone="bi bi-dash-circle"
-        [SidebarLinkAlone]="NOT_FOUND">
-      </app-sidebar-item-alone> -->
-    </ng-container>
+    <li class="nav-heading">Pages</li>
+
+    <app-sidebar-item-alone TitelItemAlone="Login" IconItemAlone="bi bi-box-arrow-in-right">
+    </app-sidebar-item-alone>
+    <app-sidebar-item-alone TitelItemAlone="Error 404" IconItemAlone="bi bi-dash-circle">
+    </app-sidebar-item-alone>
+    <app-sidebar-item-alone TitelItemAlone="Blank" IconItemAlone="bi bi-file-earmark">
+    </app-sidebar-item-alone>
   </ul>
 </aside>
 <!-- End Sidebar-->
