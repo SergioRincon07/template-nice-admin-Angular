@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DropdownSidebarComponent } from '../../ui/dropdown/dropdown-sidebar/dropdown-sidebar.component';
-import { SideBarManu } from '../../../models/sidebar';
+import { SideBarManu } from '../../../models/Sidebar';
 import { ClickOutsideDirective } from 'src/app/shared/directives/click-outside.directive';
 
 @Component({

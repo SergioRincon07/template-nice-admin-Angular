@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SideBarManuItem } from '../../../../models/sidebar';
+import { SideBarManuItem } from '../../../../models/Sidebar';
 import { DropdownSidebarItemComponent } from '../dropdown-sidebar-item/dropdown-sidebar-item.component';
 
 @Component({

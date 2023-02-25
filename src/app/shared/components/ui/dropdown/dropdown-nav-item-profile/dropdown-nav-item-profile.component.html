@@ -2,47 +2,47 @@
   class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile show dropdown-menu-profile-position"
   data-popper-placement="bottom-end">
   <li class="dropdown-header">
-    <h6>Kevin Anderson</h6>
-    <span>Web Designer</span>
+    <h6>{{ userProfile?.Nombre }}</h6>
+    <span>{{ userProfile?.TipoAdministrador }}</span>
   </li>
   <li>
     <hr class="dropdown-divider" />
   </li>
 
   <li>
-    <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+    <button class="dropdown-item d-flex align-items-center" (click)="viewProfile()">
       <i class="bi bi-person"></i>
-      <span>My Profile</span>
-    </a>
+      <span>Mi Perfil</span>
+    </button>
   </li>
   <li>
     <hr class="dropdown-divider" />
   </li>
 
   <li>
-    <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+    <button class="dropdown-item d-flex align-items-center" disabled>
       <i class="bi bi-gear"></i>
-      <span>Account Settings</span>
-    </a>
+      <span>Configuración</span>
+    </button>
   </li>
   <li>
     <hr class="dropdown-divider" />
   </li>
 
   <li>
-    <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+    <button class="dropdown-item d-flex align-items-center" disabled>
       <i class="bi bi-question-circle"></i>
-      <span>Need Help?</span>
-    </a>
+      <span>Ayuda?</span>
+    </button>
   </li>
   <li>
     <hr class="dropdown-divider" />
   </li>
 
   <li>
-    <a class="dropdown-item d-flex align-items-center" href="#">
+    <button class="dropdown-item d-flex align-items-center" (click)="cerrarSesion()">
       <i class="bi bi-box-arrow-right"></i>
-      <span>Sign Out</span>
-    </a>
+      <span>Cerrar Sesión</span>
+    </button>
   </li>
 </ul>

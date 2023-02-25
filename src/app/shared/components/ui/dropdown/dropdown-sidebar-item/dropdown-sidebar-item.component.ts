@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClickOutsideDirective } from 'src/app/shared/directives/click-outside.directive';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dropdown-sidebar-item',
   standalone: true,
-  imports: [CommonModule, ClickOutsideDirective, RouterModule],
+  imports: [CommonModule, ClickOutsideDirective, RouterLink],
   templateUrl: './dropdown-sidebar-item.component.html',
   styles: [],
 })

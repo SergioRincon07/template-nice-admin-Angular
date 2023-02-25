@@ -1,7 +1,4 @@
 <main id="main" class="main">
-  <div class="pagetitle">
-    <h1>Home</h1>
-  </div>
   <!-- End Page Title -->
   <section class="section dashboard">
     <div class="row">
@@ -13,29 +10,51 @@
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Home <span>/Home</span></h5>
-              <button type="button" (click)="creteNewProduct()" class="btn btn-success btn-sm">
-                create product
-              </button>
-              <div class="products-grid">
-                <div *ngFor="let product of products">
-                  <img [src]="product.images[0]" />
-                  <p>{{ product.title }}</p>
-                  <button type="button" class="btn btn-light btn-sm">Add Product</button>
-                  &nbsp;
-                  <button
-                    type="button"
-                    class="btn btn-info btn-sm"
-                    (click)="openDialog('0ms', '0ms', product.id)">
-                    View
-                  </button>
+              <section class="pt-5 pt-md-11">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-md-5 col-lg-6 order-md-2">
+                      <!-- Image -->
+                      <!-- https://www.freepik.es/vector-gratis/ilustracion-concepto-estadisticas-sitio_7140733.htm?query=Sistema%20de%20gesti%C3%B3nde%20informaci%C3%B3n%20con%20personas#from_view=detail_alsolike -->
+                      <img
+                        src="assets/images/WelcomeApp.jpg"
+                        class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate"
+                        alt="..."
+                        data-aos="fade-up"
+                        data-aos-delay="100" />
+                    </div>
+                    <div
+                      class="col-12 col-md-7 col-lg-6 order-md-1 aos-init aos-animate"
+                      data-aos="fade-up">
+                      <!-- Heading -->
+                      <h1 class="display-3 text-center text-md-start">
+                        Bienvenido a <span class="text-primary">Administracion Proveedores</span>.
+                        <br />
+                      </h1>
+
+                      <!-- Text -->
+                      <p class="lead text-center text-md-start text-muted mb-6 mb-lg-8">
+                        Hola, esta es nuestra plataforma de administración de proveedores. Esta
+                        herramienta le ayudará a llevar un control eficiente de sus relaciones
+                        comerciales con sus proveedores.
+                        <b *ngIf="!logeado">
+                          Para acceder a todas las funcionalidades de nuestra plataforma, inicie
+                          sesión.
+                        </b>
+                      </p>
+
+                      <!-- Buttons -->
+                      <div class="text-center text-md-start" *ngIf="!logeado">
+                        <a class="btn btn-primary shadow lift me-1" [routerLink]="['/' + LOGIN]">
+                          Login
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- / .row -->
                 </div>
-                <!-- <img
-                  ngSrc="../../../assets/images/not-found.svg"
-                  width="400"
-                  height="200"
-                  priority /> -->
-              </div>
+                <!-- / .container -->
+              </section>
             </div>
           </div>
         </div>
